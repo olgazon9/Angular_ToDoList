@@ -1,0 +1,21 @@
+<div class="todo-container">
+    <div class="header">My Todo List</div>
+    <div class="input-section">
+      <input [(ngModel)]="newItem" placeholder="Add a new task" matInput>
+      <button (click)="addItem()" mat-raised-button class="add-button">Add</button>
+    </div>
+  
+    <mat-list>
+      <div *ngFor="let item of items">
+        <mat-list-item>
+          <mat-checkbox [class.completed]="item.completed" [(ngModel)]="item.completed" (change)="toggleCompletion(item)">
+            {{ item.name }}
+          </mat-checkbox>
+          <button (click)="deleteItem(item)" mat-icon-button class="delete-button">
+            <mat-icon>delete</mat-icon>
+          </button>
+        </mat-list-item>
+      </div>
+    </mat-list>
+  </div>
+  

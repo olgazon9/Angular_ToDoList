@@ -1,0 +1,79 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  
+  .todo-container {
+    width: 100%;
+    max-width: 500px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .header {
+    text-align: center;
+    font-size: 24px;
+    color: #4a90e2;
+    margin-bottom: 20px;
+  }
+  
+  .input-section {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  input, button {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+  }
+  
+  input {
+    flex-grow: 1;
+    margin-right: 10px;
+  }
+  
+  button.add-button {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    &:hover {
+      background-color: #43a047;
+    }
+  }
+  
+  mat-list-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #e3f2fd;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    &:hover {
+      background-color: #bbdefb;
+    }
+  }
+  
+  /* Removed the .completed class styling for strikethrough */
+  
+  button.delete-button {
+    margin-left: 10px;
+    color: red;
+    background: none;
+    border: none;
+    &:hover {
+      color: darkred;
+    }
+  }
+  
